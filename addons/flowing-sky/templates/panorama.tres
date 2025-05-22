@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dbu286k1fhd4q"]
+
+[ext_resource type="Shader" uid="uid://doqw44ab27th1" path="res://addons/flowing-sky/shaders/panorama.gdshader" id="1_jniug"]
+[ext_resource type="Texture2D" uid="uid://byefyrondw2rr" path="res://addons/flowing-sky/templates/panorama.png" id="2_alo5a"]
+
+[resource]
+shader = ExtResource("1_jniug")
+shader_parameter/sky_color = Color(1, 1, 1, 1)
+shader_parameter/sky_texture = ExtResource("2_alo5a")
+shader_parameter/wind_direction = Vector2(-1, 1)
+shader_parameter/wind_intensity = 0.05
+shader_parameter/wind_speed = 0.15
+shader_parameter/ground_enabled = false
+shader_parameter/ground_threshold = 0.0
+shader_parameter/ground_blend = 0.2
+shader_parameter/sun_enabled = true
+shader_parameter/sun_rotation = Vector2(60, 30)
+shader_parameter/sun_threshold = 0.98
+shader_parameter/sun_blend = 0.02
+shader_parameter/sun_show = true
+shader_parameter/pole_threshold = 0.96
+shader_parameter/pole_whirlwind = true

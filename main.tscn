@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx0dhofqjgsb5"]
+
+[ext_resource type="Sky" uid="uid://djx338cmyvob8" path="res://addons/flowing-sky/flowing-sky.tres" id="1_l8vbq"]
+
+[sub_resource type="Environment" id="Environment_5hcua"]
+background_mode = 2
+sky = ExtResource("1_l8vbq")
+
+[node name="main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5hcua")

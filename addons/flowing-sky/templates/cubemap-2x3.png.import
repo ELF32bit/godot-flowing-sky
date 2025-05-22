@@ -1,0 +1,25 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://3geyhavi2u6g"
+path="res://.godot/imported/cubemap-2x3.png-372edb4434c23cb3fcde415e05e57ee0.ccube"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://addons/flowing-sky/templates/cubemap-2x3.png"
+dest_files=["res://.godot/imported/cubemap-2x3.png-372edb4434c23cb3fcde415e05e57ee0.ccube"]
+
+[params]
+
+compress/mode=3
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/arrangement=1
