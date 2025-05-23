@@ -1,0 +1,8 @@
+[gd_resource type="Sky" load_steps=2 format=3 uid="uid://djx338cmyvob8"]
+
+[ext_resource type="Material" uid="uid://dbu286k1fhd4q" path="res://addons/flowing-sky/templates/panorama.tres" id="1_kk0ix"]
+
+[resource]
+sky_material = ExtResource("1_kk0ix")
+process_mode = 2
+radiance_size = 2

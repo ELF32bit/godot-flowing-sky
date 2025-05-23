@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bahr0t1e7cvca"
-path="res://.godot/imported/panorama.png-b1a0ecfdfe493d614366e5ee50dd830b.ctex"
+path="res://.godot/imported/panorama.png-fe69f088a87d11d4c596fe7b2264422f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/flowing-sky/examples/panorama.png"
-dest_files=["res://.godot/imported/panorama.png-b1a0ecfdfe493d614366e5ee50dd830b.ctex"]
+source_file="res://examples/panorama.png"
+dest_files=["res://.godot/imported/panorama.png-fe69f088a87d11d4c596fe7b2264422f.ctex"]
 
 [params]
 

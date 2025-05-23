@@ -3,15 +3,15 @@
 importer="cubemap_texture"
 type="CompressedCubemap"
 uid="uid://b1uithfgnyx87"
-path="res://.godot/imported/cubemap.png-1d80146b57b16dc0f516f1c0396e9bd1.ccube"
+path="res://.godot/imported/cubemap.png-cfdeb3746e67cf28705fb88697c03dd2.ccube"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/flowing-sky/examples/cubemap.png"
-dest_files=["res://.godot/imported/cubemap.png-1d80146b57b16dc0f516f1c0396e9bd1.ccube"]
+source_file="res://examples/cubemap.png"
+dest_files=["res://.godot/imported/cubemap.png-cfdeb3746e67cf28705fb88697c03dd2.ccube"]
 
 [params]
 

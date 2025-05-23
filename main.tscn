@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cx0dhofqjgsb5"]
 
-[ext_resource type="Sky" uid="uid://djx338cmyvob8" path="res://addons/flowing-sky/flowing-sky.tres" id="1_l8vbq"]
+[ext_resource type="Sky" uid="uid://dnry0r334fp7v" path="res://examples/sky.tres" id="1_xdv2b"]
 
 [sub_resource type="Environment" id="Environment_5hcua"]
 background_mode = 2
-sky = ExtResource("1_l8vbq")
+sky = ExtResource("1_xdv2b")
 
 [node name="main" type="Node3D"]
 

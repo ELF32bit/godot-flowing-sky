@@ -1,12 +1,11 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bmijbf0djpit0"]
 
-[ext_resource type="Shader" uid="uid://bt4peojmkhun6" path="res://addons/flowing-sky/shaders/cubemap.gdshader" id="1_5u6l7"]
+[ext_resource type="Shader" path="res://addons/flowing-sky/shaders/cubemap.gdshader" id="1_5u6l7"]
 [ext_resource type="CompressedCubemap" uid="uid://3geyhavi2u6g" path="res://addons/flowing-sky/templates/cubemap-2x3.png" id="2_jcfef"]
 
 [resource]
 shader = ExtResource("1_5u6l7")
 shader_parameter/sky_color = Color(1, 1, 1, 1)
-shader_parameter/sky_texture = ExtResource("2_jcfef")
 shader_parameter/wind_direction = Vector2(-1, 1)
 shader_parameter/wind_intensity = 0.05
 shader_parameter/wind_speed = 0.15
@@ -18,3 +17,4 @@ shader_parameter/sun_rotation = Vector2(60, 30)
 shader_parameter/sun_threshold = 0.98
 shader_parameter/sun_blend = 0.02
 shader_parameter/sun_show = true
+shader_parameter/sky_texture = ExtResource("2_jcfef")
