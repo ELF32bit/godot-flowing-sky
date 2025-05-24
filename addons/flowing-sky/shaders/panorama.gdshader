@@ -24,7 +24,8 @@ uniform bool pole_whirlwind = true;
 
 vec4 flowing_sky(vec3 sky_normal, vec2 sky_coords) {
 	vec3 up_vector = vec3(0.0, 1.0, 0.0);
-	vec3 sphere_v = normalize(up_vector - dot(up_vector, sky_normal) * sky_normal);
+	float sky_normal_dot_up = dot(sky_normal, up_vector);
+	vec3 sphere_v = normalize(up_vector - sky_normal_dot_up * sky_normal);
 	vec3 sphere_u = cross(sphere_v, sky_normal);
 
 	vec3 wind_direction_normalized = normalize(vec3(wind_direction.x, 0.0, wind_direction.y));
@@ -38,7 +39,7 @@ vec4 flowing_sky(vec3 sky_normal, vec2 sky_coords) {
 	float ground_mask = 1.0;
 	if (ground_enabled) {
 		float ground_threshold_remapped = (ground_threshold + 1.0) * (1.0 + ground_blend / 2.0) - 1.0; // from [-1.0, 1.0] to [-1.0, 1.0 + ground_blend]
-		ground_mask = smoothstep(ground_threshold_remapped - ground_blend, ground_threshold_remapped, dot(up_vector, sky_normal));
+		ground_mask = smoothstep(ground_threshold_remapped - ground_blend, ground_threshold_remapped, sky_normal_dot_up);
 	}
 
 	float sun_mask = 1.0;
@@ -56,7 +57,7 @@ vec4 flowing_sky(vec3 sky_normal, vec2 sky_coords) {
 	vec4 mix_color = mix(phase1_color, phase2_color, mix_time);
 
 	vec4 pole_color; // fixing uv holes on poles
-	float pole_mix = smoothstep(pole_threshold, 1.0, abs(dot(up_vector, sky_normal)));
+	float pole_mix = smoothstep(pole_threshold, 1.0, abs(sky_normal_dot_up));
 	if (pole_whirlwind) {
 		vec2 pole_flow_uv = vec2(pole_mix, 1.0 - pole_mix); // creates whirlwind at poles
 		vec2 pole_phase1_uv = sky_coords + pole_flow_uv * wind_intensity * phase1_time * mask;

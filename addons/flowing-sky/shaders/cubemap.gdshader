@@ -21,11 +21,11 @@ uniform bool sun_show = false;
 
 vec4 flowing_sky(vec3 sky_normal) {
 	vec3 up_vector = vec3(0.0, 1.0, 0.0);
-	float sky_normal_up = dot(up_vector, sky_normal);
+	float sky_normal_dot_up = dot(sky_normal, up_vector);
 
 	vec3 wind_direction_normalized = normalize(vec3(-wind_direction.x, 0.0, -wind_direction.y));
 	vec3 flow_direction = wind_direction_normalized - dot(wind_direction_normalized, sky_normal) * sky_normal;
-	flow_direction *= mix(2.0 * PI, PI, abs(sky_normal_up));
+	flow_direction *= mix(2.0 * PI, PI, abs(sky_normal_dot_up));
 
 	float phase1_time = fract(TIME * wind_speed);
 	float phase2_time = fract(phase1_time + 0.5);
@@ -34,7 +34,7 @@ vec4 flowing_sky(vec3 sky_normal) {
 	float ground_mask = 1.0;
 	if (ground_enabled) {
 		float ground_threshold_remapped = (ground_threshold + 1.0) * (1.0 + ground_blend / 2.0) - 1.0; // from [-1.0, 1.0] to [-1.0, 1.0 + ground_blend]
-		ground_mask = smoothstep(ground_threshold_remapped - ground_blend, ground_threshold_remapped, sky_normal_up);
+		ground_mask = smoothstep(ground_threshold_remapped - ground_blend, ground_threshold_remapped, sky_normal_dot_up);
 	}
 
 	float sun_mask = 1.0;
